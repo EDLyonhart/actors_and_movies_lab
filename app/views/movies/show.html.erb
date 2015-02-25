@@ -2,6 +2,7 @@
 
 <p><%= @movie.year %></p>
 
+<<<<<<< HEAD
 <ul>
   <% @actors.each do |actor| %>
     <li><%= actor.name %></li>
@@ -9,6 +10,27 @@
 </ul>
 
 <%= link_to "Edit Movie", edit_movie_path(@movie) %>
+=======
+<div class="black-box">
+  <h2>Actors</h2>
+  <ul>
+    <% @movie.actors.each do |actor| %>
+    <li>
+      <%= link_to actor.name, actor %>
+      <%= button_to "X", remove_actor_path(@movie, actor), :method => :delete %>
+    </li>
+    <% end %>
+  </ul>
+  <% unless @actors.empty? %>
+    <%= form_tag add_actor_path(@movie) do %>
+      <%= collection_select :actor, :id, @actors, :id, :name %>
+      <%= submit_tag "Add" %>
+    <% end %>
+  <% end %>
+</div>
+
+<%= link_to "Edit", edit_movie_path(@movie) %>
+>>>>>>> b6f563e4e6ddbbc2addd3b2b5d4ed2beb35a8b05
 <%= button_to "Delete", movie_path(@movie), :method => :delete %>
 <br><br>
 

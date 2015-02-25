@@ -11,24 +11,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150223224943) do
+=======
+ActiveRecord::Schema.define(version: 20150223001249) do
+>>>>>>> b6f563e4e6ddbbc2addd3b2b5d4ed2beb35a8b05
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
   create_table "actor_movies", force: true do |t|
     t.integer  "actor_id"
     t.integer  "movie_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
+=======
   create_table "actors", force: true do |t|
     t.string   "name"
+>>>>>>> b6f563e4e6ddbbc2addd3b2b5d4ed2beb35a8b05
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+<<<<<<< HEAD
+  create_table "actors", force: true do |t|
+    t.string   "name"
+=======
+  create_table "actors_movies", force: true do |t|
+    t.integer  "actor_id"
+    t.integer  "movie_id"
+>>>>>>> b6f563e4e6ddbbc2addd3b2b5d4ed2beb35a8b05
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+<<<<<<< HEAD
+=======
+  add_index "actors_movies", ["actor_id"], name: "index_actors_movies_on_actor_id", using: :btree
+  add_index "actors_movies", ["movie_id"], name: "index_actors_movies_on_movie_id", using: :btree
+
+>>>>>>> b6f563e4e6ddbbc2addd3b2b5d4ed2beb35a8b05
   create_table "movies", force: true do |t|
     t.string   "title"
     t.integer  "year"

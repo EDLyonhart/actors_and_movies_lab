@@ -1,9 +1,20 @@
 <h1>Actors</h1>
 
 <ul>
+<<<<<<< HEAD
   <% @actors.each do |actor| %>
   <li><%= link_to "#{actor.name}", actor %></li>
   <% end %>
 </ul>
 
 <%= link_to "Add an actor", new_actor_path %>
+=======
+  <% @actors.each do |star| %>
+  <li><%= link_to star.name, actor_path(star) %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Add new actor", new_actor_path %>
+<br><br>
+<%= link_to "Back to home", root_path %>
+>>>>>>> b6f563e4e6ddbbc2addd3b2b5d4ed2beb35a8b05
